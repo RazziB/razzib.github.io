@@ -1,13 +1,14 @@
 <html>
 <head></head>
 <body>
+LUNCH CHOICE SHOULD APPEAR HERE: </br>
   <h1 id="asd"></h1>
 <script>
   function choose(c){
     var i = Math.floor(Math.random()*c.length);
     return c[i]
     }
-  document.GetElementById("asd").innerHTML = choose(["Dining Room", "Chicken Station", "Nurman"])
+  document.getElementById("asd").innerHTML = choose(["Dining Room", "Chicken Station", "Nurman"])
 </script>
 </body>
 </html>
