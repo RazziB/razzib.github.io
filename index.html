@@ -1,14 +1,32 @@
 <html>
 <head></head>
 <body>
-LUNCH CHOICE SHOULD APPEAR HERE: </br>
-  <h1 id="asd"></h1>
+  <div class=></div>
+
+ </br>
+
+  <div id="asd">
+    <div id="container"></div>
+  </div>
+  <button class="button-9" onclick="choose()" role="button">ROLL</button>
+
 <script>
-  function choose(c){
+  async function choose(c){
+    document.getElementById("asd").className = "lds-hourglass"
+    document.getElementById("asd").innerHTML = ""
+
+    c = ["Dining Room", "Chicken Station", "Nurman"]
+    console.log('234')
+    await new Promise(r => setTimeout(r, 3000));
     var i = Math.floor(Math.random()*c.length);
-    return c[i]
+
+    document.getElementById("asd").className = ""
+
+    document.getElementById("asd").innerHTML = c[i]
+
     }
-  document.getElementById("asd").innerHTML = choose(["Dining Room", "Chicken Station", "Nurman"])
 </script>
+<link rel="stylesheet", href="style.css">
+
 </body>
 </html>
